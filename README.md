@@ -1,0 +1,1 @@
+# Dynamics-365-CE-Client-Side-Scripting-Patterns
