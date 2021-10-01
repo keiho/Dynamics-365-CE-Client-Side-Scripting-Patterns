@@ -26,11 +26,11 @@ jobs:
           app-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
-          solution-name: todoSoultionName
-          solution-output-file: todoSoultionName.zip
+          solution-name: ScriptPatternsDemoRibbon
+          solution-output-file: ScriptPatternsDemoRibbon.zip
           managed: false
           run-asynchronously: true
       - uses: actions/upload-artifact@v2
         with:
           name: unmanaged-solution
-          path: melody_core.zip
+          path: ScriptPatternsDemoRibbon.zip
