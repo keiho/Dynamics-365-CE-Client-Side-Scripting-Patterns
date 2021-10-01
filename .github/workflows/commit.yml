@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: commit
+
+# Controls when the workflow will run
+on:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      commit-msg:
+        required: true
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  export-unmanaged:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: microsoft/powerplatform-actions/export-solution@v0
+        with:
+          environment-url: ${{ secrets.URL }}
+          app-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          solution-name: todoSoultionName
+          solution-output-file: todoSoultionName.zip
+          managed: false
+          run-asynchronously: true
+      - uses: actions/upload-artifact@v2
+        with:
+          name: unmanaged-solution
+          path: melody_core.zip
