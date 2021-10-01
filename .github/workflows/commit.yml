@@ -27,10 +27,10 @@ jobs:
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
           solution-name: ScriptPatternsDemoRibbon
-          solution-output-file: ScriptPatternsDemoRibbon.zip
+          solution-output-file: ScriptPatternsDemo.zip
           managed: false
           run-asynchronously: true
       - uses: actions/upload-artifact@v2
         with:
           name: unmanaged-solution
-          path: ScriptPatternsDemoRibbon.zip
+          path: ScriptPatternsDemo.zip
