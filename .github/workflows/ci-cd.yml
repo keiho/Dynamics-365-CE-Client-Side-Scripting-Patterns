@@ -55,4 +55,4 @@ jobs:
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
           solution-file: solution/ScriptPatternsDemo_managed.zip
-        
+          run-asynchronously: true
