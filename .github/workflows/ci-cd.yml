@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: ci-cd
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+    # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths
+    paths: ['solution/**']
+  # https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#workflow_run
+  workflow_run: 
+    workflows: ["commit"]
+    branches: [main]
+    types: 
+      - completed
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.workflow_run == null }}
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+# https://github.com/microsoft/powerplatform-actions/blob/main/pack-solution/action.yml
+      - uses: microsoft/powerplatform-actions/pack-solution@v0
+        with:
+          solution-file: ScriptPatternsDemo.zip
+          solution-folder: solution
+          solution-type: Both
+      - uses: actions/upload-artifact@v2
+        with:
+          name: solution
+          path: '*.zip'
+          
