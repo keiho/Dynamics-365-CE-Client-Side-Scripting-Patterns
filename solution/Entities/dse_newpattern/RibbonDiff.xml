@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="dse.dse_newpattern.ClearCache.Button.CustomAction" Location="Mscrm.Form.dse_newpattern.MainTab.Save.Controls._children" Sequence="85">
+      <CommandUIDefinition>
+        <Button Command="dse.dse_newpattern.ClearCache.Command" Id="dse.dse_newpattern.ClearCache.Button" LabelText="$LocLabels:dse.dse_newpattern.ClearCache.Button.LabelText" Sequence="85" TemplateAlias="o2" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="dse.dse_newpattern.Salesperson.Button.CustomAction" Location="Mscrm.Form.dse_newpattern.MainTab.Save.Controls._children" Sequence="80">
+      <CommandUIDefinition>
+        <Button Command="dse.dse_newpattern.Salesperson.Command" Id="dse.dse_newpattern.Salesperson.Button" LabelText="$LocLabels:dse.dse_newpattern.Salesperson.Button.LabelText" Sequence="80" TemplateAlias="o2" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="dse.dse_newpattern.SparkTeam.Button.CustomAction" Location="Mscrm.Form.dse_newpattern.MainTab.Save.Controls._children" Sequence="80">
+      <CommandUIDefinition>
+        <Button Command="dse.dse_newpattern.SparkTeam.Command" Id="dse.dse_newpattern.SparkTeam.Button" LabelText="$LocLabels:dse.dse_newpattern.SparkTeam.Button.LabelText" Sequence="80" TemplateAlias="o2" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="dse.dse_newpattern.ClearCache.Command">
+      <EnableRules />
+      <DisplayRules>
+        <DisplayRule Id="dse.dse_newpattern.ClearCache.DisplayRule" />
+      </DisplayRules>
+      <Actions>
+        <JavaScriptFunction FunctionName="Spark30Common.ClearCustomBrowserCache" Library="$webresource:dse_/Scripts/common/common.js">
+          <CrmParameter Value="PrimaryControl" />
+        </JavaScriptFunction>
+      </Actions>
+    </CommandDefinition>
+    <CommandDefinition Id="dse.dse_newpattern.Salesperson.Command">
+      <EnableRules>
+        <EnableRule Id="dse.dse_newpattern.Salesperson.EnableRule" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="dse.dse_newpattern.Salesperson.DisplayRule" />
+      </DisplayRules>
+      <Actions />
+    </CommandDefinition>
+    <CommandDefinition Id="dse.dse_newpattern.SparkTeam.Command">
+      <EnableRules>
+        <EnableRule Id="dse.dse_newpattern.SparkTeam.EnableRule" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="dse.dse_newpattern.SparkTeam.DisplayRule" />
+      </DisplayRules>
+      <Actions />
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="dse.dse_newpattern.ClearCache.DisplayRule">
+        <FormStateRule State="Existing" Default="true" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="dse.dse_newpattern.Salesperson.DisplayRule">
+        <FormStateRule State="Existing" Default="false" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="dse.dse_newpattern.SparkTeam.DisplayRule">
+        <FormStateRule State="Existing" Default="false" InvertResult="false" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="dse.dse_newpattern.Salesperson.EnableRule">
+        <CustomRule FunctionName="NewPatternForm.SalespersonButtonEnableRule" Library="$webresource:dse_/Scripts/NewPattern/newPatternRibbon.js" Default="false" InvertResult="false">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="dse.dse_newpattern.SparkTeam.EnableRule">
+        <CustomRule FunctionName="NewPatternForm.SparkTeamButtonEnableRule" Library="$webresource:dse_/Scripts/NewPattern/newPatternRibbon.js" Default="false" InvertResult="false">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="dse.dse_newpattern.ClearCache.Button.LabelText">
+      <Titles>
+        <Title description="Clear Cache" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="dse.dse_newpattern.Salesperson.Button.LabelText">
+      <Titles>
+        <Title description="Sales Person" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="dse.dse_newpattern.SparkTeam.Button.LabelText">
+      <Titles>
+        <Title description="Spark Team" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

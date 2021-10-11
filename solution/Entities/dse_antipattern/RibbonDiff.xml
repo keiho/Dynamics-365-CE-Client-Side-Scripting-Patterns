@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RibbonDiffXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CustomActions>
+    <CustomAction Id="dse.dse_antipattern.Salesperson.Button.CustomAction" Location="Mscrm.Form.dse_antipattern.MainTab.Save.Controls._children" Sequence="80">
+      <CommandUIDefinition>
+        <Button Command="dse.dse_antipattern.Salesperson.Command" Id="dse.dse_antipattern.Salesperson.Button" LabelText="$LocLabels:dse.dse_antipattern.Salesperson.Button.LabelText" Sequence="80" TemplateAlias="o2" />
+      </CommandUIDefinition>
+    </CustomAction>
+    <CustomAction Id="dse.dse_antipattern.SparkTeam.Button.CustomAction" Location="Mscrm.Form.dse_antipattern.MainTab.Save.Controls._children" Sequence="80">
+      <CommandUIDefinition>
+        <Button Command="dse.dse_antipattern.SparkTeam.Command" Id="dse.dse_antipattern.SparkTeam.Button" LabelText="$LocLabels:dse.dse_antipattern.SparkTeam.Button.LabelText" Sequence="80" TemplateAlias="o2" />
+      </CommandUIDefinition>
+    </CustomAction>
+  </CustomActions>
+  <Templates>
+    <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
+  </Templates>
+  <CommandDefinitions>
+    <CommandDefinition Id="dse.dse_antipattern.Salesperson.Command">
+      <EnableRules>
+        <EnableRule Id="dse.dse_antipattern.Salesperson.EnableRule" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="dse.dse_antipattern.Salesperson.DisplayRule" />
+      </DisplayRules>
+      <Actions />
+    </CommandDefinition>
+    <CommandDefinition Id="dse.dse_antipattern.SparkTeam.Command">
+      <EnableRules>
+        <EnableRule Id="dse.dse_antipattern.SparkTeam.EnableRule" />
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="dse.dse_antipattern.SparkTeam.DisplayRule" />
+      </DisplayRules>
+      <Actions />
+    </CommandDefinition>
+  </CommandDefinitions>
+  <RuleDefinitions>
+    <TabDisplayRules />
+    <DisplayRules>
+      <DisplayRule Id="dse.dse_antipattern.Salesperson.DisplayRule">
+        <FormStateRule State="Existing" Default="false" InvertResult="false" />
+      </DisplayRule>
+      <DisplayRule Id="dse.dse_antipattern.SparkTeam.DisplayRule">
+        <FormStateRule State="Existing" Default="false" InvertResult="false" />
+      </DisplayRule>
+    </DisplayRules>
+    <EnableRules>
+      <EnableRule Id="dse.dse_antipattern.Salesperson.EnableRule">
+        <CustomRule FunctionName="AntipatternForm.SalespersonButtonEnableRule" Library="$webresource:dse_/Scripts/Antipattern/antipatternRibbon.js" Default="false" InvertResult="false">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+      <EnableRule Id="dse.dse_antipattern.SparkTeam.EnableRule">
+        <CustomRule FunctionName="AntipatternForm.SparkTeamButtonEnableRule" Library="$webresource:dse_/Scripts/Antipattern/antipatternRibbon.js" Default="false" InvertResult="false">
+          <CrmParameter Value="PrimaryControl" />
+        </CustomRule>
+      </EnableRule>
+    </EnableRules>
+  </RuleDefinitions>
+  <LocLabels>
+    <LocLabel Id="dse.dse_antipattern.Salesperson.Button.LabelText">
+      <Titles>
+        <Title description="Sales Person" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+    <LocLabel Id="dse.dse_antipattern.SparkTeam.Button.LabelText">
+      <Titles>
+        <Title description="Spark Team" languagecode="1033" />
+      </Titles>
+    </LocLabel>
+  </LocLabels>
+</RibbonDiffXml>

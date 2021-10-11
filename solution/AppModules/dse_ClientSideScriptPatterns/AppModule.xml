@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>dse_ClientSideScriptPatterns</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="1" schemaName="account" />
+    <AppModuleComponent type="60" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+    <AppModuleComponent type="60" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
+    <AppModuleComponent type="1" schemaName="dse_antipattern" />
+    <AppModuleComponent type="60" id="{d24c2a18-113f-480d-aff0-6c4cb559bc47}" />
+    <AppModuleComponent type="1" schemaName="dse_newpattern" />
+    <AppModuleComponent type="60" id="{9599d2fc-4235-49cd-a19d-01114625de05}" />
+    <AppModuleComponent type="1" schemaName="dse_systemconfiguration" />
+    <AppModuleComponent type="60" id="{1cb4ea3b-e65c-4e6c-a803-f28d1619f976}" />
+    <AppModuleComponent type="1" schemaName="team" />
+    <AppModuleComponent type="60" id="{f5cfab6a-d4c2-4519-b68f-6e7485432e29}" />
+    <AppModuleComponent type="1" schemaName="systemuser" />
+    <AppModuleComponent type="62" schemaName="dse_ClientSideScriptPatterns" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Client Side Script Patterns" languagecode="1033" />
+  </LocalizedNames>
+  <appsettings>
+    <appsetting uniquename="dse_ClientSideScriptPatterns_AsyncOnLoad">
+      <iscustomizable>1</iscustomizable>
+      <settingdefinitionid>
+        <uniquename>AsyncOnLoad</uniquename>
+      </settingdefinitionid>
+      <value>true</value>
+    </appsetting>
+  </appsettings>
+</AppModule>

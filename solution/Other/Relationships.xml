@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_dse_antipattern" />
+  <EntityRelationship Name="business_unit_dse_newpattern" />
+  <EntityRelationship Name="business_unit_dse_systemconfiguration" />
+  <EntityRelationship Name="dse_antipattern_account_account" />
+  <EntityRelationship Name="dse_newpattern_accountid_account" />
+  <EntityRelationship Name="lk_dse_antipattern_createdby" />
+  <EntityRelationship Name="lk_dse_antipattern_modifiedby" />
+  <EntityRelationship Name="lk_dse_newpattern_createdby" />
+  <EntityRelationship Name="lk_dse_newpattern_modifiedby" />
+  <EntityRelationship Name="lk_dse_systemconfiguration_createdby" />
+  <EntityRelationship Name="lk_dse_systemconfiguration_modifiedby" />
+  <EntityRelationship Name="owner_dse_antipattern" />
+  <EntityRelationship Name="owner_dse_newpattern" />
+  <EntityRelationship Name="owner_dse_systemconfiguration" />
+  <EntityRelationship Name="team_dse_antipattern" />
+  <EntityRelationship Name="team_dse_newpattern" />
+  <EntityRelationship Name="team_dse_systemconfiguration" />
+  <EntityRelationship Name="user_dse_antipattern" />
+  <EntityRelationship Name="user_dse_newpattern" />
+  <EntityRelationship Name="user_dse_systemconfiguration" />
+</EntityRelationships>

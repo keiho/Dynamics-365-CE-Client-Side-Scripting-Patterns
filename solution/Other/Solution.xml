@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.21091.139" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>ScriptPatternsDemo</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Script Patterns Demo crap" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.6</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>DsetTeam</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="DSE Team" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>dse</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="account" behavior="2" />
+      <RootComponent type="1" schemaName="dse_antipattern" behavior="0" />
+      <RootComponent type="1" schemaName="dse_newpattern" behavior="0" />
+      <RootComponent type="1" schemaName="dse_systemconfiguration" behavior="0" />
+      <RootComponent type="1" schemaName="systemuser" behavior="2" />
+      <RootComponent type="61" schemaName="dse_/Scripts/Antipattern/antipatternOnLoad.js" behavior="0" />
+      <RootComponent type="61" schemaName="dse_/Scripts/Antipattern/antipatternRibbon.js" behavior="0" />
+      <RootComponent type="61" schemaName="dse_/Scripts/Common/common.js" behavior="0" />
+      <RootComponent type="61" schemaName="dse_/Scripts/NewPattern/newPatternOnLoad.js" behavior="0" />
+      <RootComponent type="61" schemaName="dse_/Scripts/NewPattern/newPatternRibbon.js" behavior="0" />
+      <RootComponent type="62" schemaName="dse_ClientSideScriptPatterns" behavior="0" />
+      <RootComponent type="80" schemaName="dse_ClientSideScriptPatterns" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="entitlement" displayName="Entitlement" solution="msdynce_Service (9.0.5.56)">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="incident" displayName="Case" solution="msdynce_Service (9.0.5.56)">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)">
+          <package>msdynce_SalesAnchor (9.0.21072.10006)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="originatingleadid" displayName="Originating Lead" parentSchemaName="account" parentDisplayName="Account" solution="msdynce_LeadManagement (9.0.4.0066)">
+          <package>msdynce_LeadManagementAnchor (9.0.21074.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="siteid" displayName="Site" parentSchemaName="systemuser" parentDisplayName="User" solution="msdynce_Service (9.0.5.56)">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="User" parentDisplayName="User" id="{c2cd9e55-d4b4-4b55-9951-16ead79643e5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="2" schemaName="territoryid" displayName="Territory" parentSchemaName="systemuser" parentDisplayName="User" solution="msdynce_AppCommon (9.0.4.0066)">
+          <package>msdynce_AppCommonAnchor (9.0.21074.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="User" parentDisplayName="User" id="{c2cd9e55-d4b4-4b55-9951-16ead79643e5}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="All Cases for Customer" displayName="All Cases for Customer" parentSchemaName="incident" parentDisplayName="Case" solution="msdynce_Service (9.0.5.56)" id="{00000000-0000-0000-00aa-000010001039}">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="My Open Opportunities" displayName="My Open Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{00000000-0000-0000-00aa-000010003000}">
+          <package>msdynce_SalesAnchor (9.0.21072.10006)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Account Entitlements" displayName="Account Entitlements" parentSchemaName="entitlement" parentDisplayName="Entitlement" solution="msdynce_Service (9.0.5.56)" id="{961bf8aa-042f-4f4d-bcca-935bfc9a6994}">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="26" schemaName="Recent Opportunities" displayName="Recent Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{9c3f7ee8-eca7-e211-9fb6-00155dd0ea05}">
+          <package>msdynce_SalesAnchor (9.0.21072.10006)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="59" schemaName="Top Customers" displayName="Top Customers" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{8bc5fb18-48f2-4782-9e16-3d452fa4ddce}">
+          <package>msdynce_SalesAnchor (9.0.21072.10006)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="account contact card" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{29de27bc-a257-4f29-99cf-bab4a84e688f}">
+          <package>msdynce_AppCommonAnchor (9.0.21074.10001)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="60" displayName="Account" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{8448b78f-8f42-454e-8e2a-f8196b0419af}">
+          <package>msdynce_AppCommonAnchor (9.0.21074.10001)</package>
+        </Required>
+        <Dependent type="80" schemaName="dse_ClientSideScriptPatterns" displayName="Client Side Script Patterns" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="dse_ClientSideScriptPatterns" displayName="Client Side Script Patterns" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="MscrmControls.CardFeedContainer.CardFeedContainer" displayName="MscrmControls.CardFeedContainer.CardFeedContainer" solution="BaseCustomControlsCore (9.0.2109.1013)" />
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="msdyn_MscrmControls.TreeView.TreeViewControl" displayName="msdyn_MscrmControls.TreeView.TreeViewControl" solution="msdyn_AssetCommon (1.0.6.37)">
+          <package>msdynce_ServiceAnchor (9.0.21074.1007)</package>
+        </Required>
+        <Dependent type="60" displayName="Account Copy" parentDisplayName="Account" id="{58c7b605-6c22-ec11-b6e6-002248090266}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="SettingDefinition" displayName="AsyncOnLoad" solution="SettingDefinitionsData (9.1.21084.210823001)" id.uniquename="AsyncOnLoad" />
+        <Dependent type="AppSetting" displayName="dse_ClientSideScriptPatterns_AsyncOnLoad" id.uniquename="dse_ClientSideScriptPatterns_AsyncOnLoad" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

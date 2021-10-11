@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{d24c2a18-113f-480d-aff0-6c4cb559bc47}</formid>
+    <IntroducedVersion>1.0.0.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form shownavigationbar="true" showImage="false" maxWidth="1920" headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{b1de1f63-0655-44be-be46-78f386a76405}" IsUserDefined="1" name="general_tab">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{fe253ef3-e40e-4cbe-9afa-38fe33fd7e2b}" name="general_tab">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{574742c6-5a16-4ce0-b48b-f318db005feb}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="dse_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="dse_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ca6c5c62-c183-4d53-b1d0-2c9723acfb31}" locklevel="0" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Account" languagecode="1033" />
+                        </labels>
+                        <control id="dse_accountid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="dse_accountid" disabled="true" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="audit_section" id="1f73446f-7030-4ff7-9a5a-a2725d3c9832" IsUserDefined="0" locklevel="0" showlabel="true" showbar="false" layout="varwidth" celllabelalignment="Left" celllabelposition="Left" columns="1" labelwidth="115" visible="false">
+                  <labels>
+                    <label description="Audit" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{93e3616a-0e93-4c1a-94a3-c401be575c54}" colspan="1" rowspan="1">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar />
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <formLibraries>
+        <Library name="dse_/Scripts/Common/common.js" libraryUniqueId="{dc3825ed-a1eb-b39a-9448-5abe7595a02b}" />
+        <Library name="dse_/Scripts/Antipattern/antipatternOnLoad.js" libraryUniqueId="{0d723232-6b85-024c-7a9c-259432bc1943}" />
+        <Library name="dse_/Scripts/Antipattern/antipatternRibbon.js" libraryUniqueId="{43106122-ea0e-3aac-7c50-acea5e99b7e3}" />
+      </formLibraries>
+      <events>
+        <event name="onload" application="false" active="false">
+          <Handlers>
+            <Handler functionName="AntipatternForm.OnLoad" libraryName="dse_/Scripts/Antipattern/antipatternOnLoad.js" handlerUniqueId="{e114cad0-0111-1c70-cbda-d7248689d6d8}" enabled="true" parameters="" passExecutionContext="true" />
+          </Handlers>
+        </event>
+      </events>
+      <header id="{2f2e5394-9c09-4bba-bb64-c27160e6de95}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{95b8fea9-33bb-40f4-ba11-194e59333f12}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{9e45e01b-7b9e-4af9-b395-9f39d98a963c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{81c7b19d-2960-4a0a-84a5-f9970547cf4e}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{d0812bf9-a90c-4752-b06e-b445d4ab7c00}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{0f65086c-206f-4511-9dfc-beb273378c92}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{063d1336-a47c-4f55-85be-5a5b4fd1bed7}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0ccf1636-d22c-4128-ad60-c4673e995e84}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <DisplayConditions Order="0" FallbackForm="true">
+        <Everyone />
+      </DisplayConditions>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
