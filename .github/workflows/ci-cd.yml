@@ -39,4 +39,11 @@ jobs:
         with:
           name: solution
           path: '*.zip'
-          
+  deploy-ddevine:
+    # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps: 
+      # https://github.com/actions/download-artifact
+      - uses: actions/download-artifact@v2
+      - run: ls -R
