@@ -26,7 +26,7 @@ jobs:
           app-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
-          solution-name: ScriptPatternsDemoRibbon
+          solution-name: ScriptPatternsDemo
           solution-output-file: ScriptPatternsDemo.zip
           managed: false
           run-asynchronously: true
@@ -46,7 +46,7 @@ jobs:
           app-id: ${{ secrets.CLIENT_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
-          solution-name: ScriptPatternsDemoRibbon
+          solution-name: ScriptPatternsDemo
           solution-output-file: ScriptPatternsDemo_managed.zip
           managed: true
           run-asynchronously: true
