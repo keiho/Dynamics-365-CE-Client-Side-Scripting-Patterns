@@ -54,3 +54,32 @@ jobs:
         with:
           name: managed-solution
           path: ScriptPatternsDemo_managed.zip
+  unpack-commit:
+    runs-on: ubuntu-latest
+    needs: 
+      - export-unmanaged
+      - export-managed
+    # Checkout the soultion(s) from the temp path
+    steps: 
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with: 
+          name: unmanaged-solution
+          path: ${{ runner.temp }}
+      - uses: actions/download-artifact@v2
+        with: 
+          name: managed-solution
+          path: ${{ runner.temp }}
+      # Unpack the Soultion(s)
+      - uses: microsoft/powerplatform-actions/unpack-solution@v0
+        with: 
+          solution-file: ${{ runner.temp }}/ScriptPatternsDemo.zip
+          solution-folder: solution
+          solution-type: Both
+      - uses: EndBug/add-and-commit@v7
+      # TODO
+      # https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onevent_nametypes
+        with: 
+          message: ${{ github.event.inputs.commit-msg }}
+          # https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#workflow_dispatch
+          # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
