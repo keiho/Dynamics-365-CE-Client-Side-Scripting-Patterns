@@ -39,6 +39,24 @@ jobs:
         with:
           name: solution
           path: '*.zip'
+  check-solution:
+    runs-on: ubuntu-latest
+    environment: Development
+    needs: [build]
+    steps:
+      # https://github.com/microsoft/powerplatform-actions/blob/main/check-solution/action.yml
+      - uses: actions/download-artifact@v2 
+      - uses: microsoft/powerplatform-actions/check-solution@v0
+        with: 
+          environment-url: ${{ secrets.URL }}
+          app-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          path: solution/ScriptPatternsDemo_managed.zip
+      - uses: actions/upload-artifact@v2
+        with:
+          name: solution-pa-solution-checker
+          path: 'CheckSolutionLogs\'
   deploy-ddevine:
     # https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
     runs-on: ubuntu-latest
